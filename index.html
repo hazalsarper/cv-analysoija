@@ -715,7 +715,7 @@ Ole tarkka ja viittaa CV:n todelliseen sisältöön. Arvioi rehellisesti suomala
     const data = await response.json();
     clearInterval(stepInterval);
 
-    const raw = data.content.map(i => i.text || '').join('');
+    const raw = (data.content || []).map(i => i.text || '').join('');
     const clean = raw.replace(/```json|```/g, '').trim();
     const result = JSON.parse(clean);
 
