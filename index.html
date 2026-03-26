@@ -701,7 +701,7 @@ Ole tarkka ja viittaa CV:n todelliseen sisältöön. Arvioi rehellisesti suomala
   ];
 
   try {
-    const response = await fetch('https://api/analyze', {
+    const response = await fetch('/api/analyze', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
